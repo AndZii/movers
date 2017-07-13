@@ -1,0 +1,12 @@
+/Users/andrey/.rvm/rubies/ruby-2.0.0-p647/bin/ruby -r ./siteconf20170712-5142-q8ci1y.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20170712-5142-1t3wda7
+installing default debug_inspector libraries
