@@ -1,0 +1,24 @@
+<%= render "/create_reservation/wizard_top" %> 
+   <div class="col-xs-10 col-xs-offset-1">     
+    <%= form_for @reservation, :url => create_reservation_path, method: :put, :html => {:class => "form-horizontal center"} do |f| %>
+          <div class="form-group">
+            <%= f.label :zip_from, "From ZIP code", id: "zip-from", class: "control-label" %>
+            <div class="">
+              <%= f.text_field :zip_from, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :zip_to, "To ZIP code", class: "control-label" %>
+            <div class="">
+              <%= f.text_field :zip_to, class: "form-control" %>
+            </div>
+          </div>
+          
+          <%=  f.hidden_field :id   %> 
+          <%=  f.submit "Continue", class: "btn btn-default pull-right" %>  
+     <% end %>
+     </div>
+<%= render "/create_reservation/wizard_bottom" %> 
+
+<script>
+</script>

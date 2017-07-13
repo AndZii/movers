@@ -1,0 +1,24 @@
+
+     <br>
+     <br>
+     <br>
+   
+<div class="row">   
+<div class="<%= @form_size_class %>">   
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> Get Quote</h3>
+    <h6><%= @panel_title %></h6>
+    <% if !@reservation.reservation_number.nil? &&  @reservation.reservation_number > 0 %>
+    <p class="pull-right" style="line-height: 1px; font-size: 10px;"> #<%= @reservation.reservation_number %></p>
+    <% end %>
+  </div>
+  <div class="panel-body"> 
+  
+    <% if @reservation.errors.any? %>
+    <div id="">
+      <div class="alert alert-danger" role="alert">
+       <p><%= @reservation.errors.messages.first[1][0] %></p>
+      </div>
+    </div>
+  <% end %>
