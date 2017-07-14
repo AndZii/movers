@@ -13,25 +13,25 @@
 
 ActiveRecord::Schema.define(version: 20170712030832) do
 
-  create_table "pictures", force: :cascade do |t|
-    t.string   "picture"
+  create_table "pictures", force: true do |t|
+    t.string   "picture",      limit: nil
     t.text     "description"
-    t.string   "name"
-    t.string   "picture_type"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "name",         limit: nil
+    t.string   "picture_type", limit: nil
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
-  create_table "reservations", force: :cascade do |t|
-    t.string   "email"
-    t.string   "phone_num"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "zip_from"
-    t.string   "zip_to"
+  create_table "reservations", force: true do |t|
+    t.string   "email",              limit: nil
+    t.string   "phone_num",          limit: nil
+    t.string   "first_name",         limit: nil
+    t.string   "last_name",          limit: nil
+    t.string   "zip_from",           limit: nil
+    t.string   "zip_to",             limit: nil
     t.integer  "reservation_number"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end
