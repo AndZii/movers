@@ -1,4 +1,4 @@
-/Users/andrey/.rvm/rubies/ruby-2.0.0-p647/bin/ruby -r ./siteconf20170713-6698-exuhev.rb extconf.rb
+/Users/andrey/.rvm/rubies/ruby-2.0.0-p647/bin/ruby -r ./siteconf20170713-15209-1snuqwp.rb extconf.rb
 creating Makefile
 
 make "DESTDIR=" clean
@@ -8,5 +8,5 @@ compiling debug_inspector.c
 linking shared-object debug_inspector.bundle
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20170713-6698-19aapni
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20170713-15209-mad17a
 installing default debug_inspector libraries

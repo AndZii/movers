@@ -1,4 +1,4 @@
-/Users/andrey/.rvm/rubies/ruby-2.0.0-p647/bin/ruby -r ./siteconf20170713-6698-g46i1n.rb extconf.rb
+/Users/andrey/.rvm/rubies/ruby-2.0.0-p647/bin/ruby -r ./siteconf20170713-15209-slhm7p.rb extconf.rb
 creating Makefile
 
 make "DESTDIR=" clean
@@ -12,5 +12,5 @@ compiling threads.c
 linking shared-object byebug/byebug.bundle
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170713-6698-1yteliu/byebug
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170713-15209-1ipt3zk/byebug
 installing default byebug libraries
