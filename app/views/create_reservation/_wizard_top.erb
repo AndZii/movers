@@ -1,13 +1,12 @@
-
-     <br>
-     <br>
-     <br>
-   
-<div class="row">   
+<div class="row mobile-title">   
+<h3>Prestine<span>Movers</span></h3>
+<br>
+<%= render "/create_reservation/step_progress_bar" %>
+<br>
 <div class="<%= @form_size_class %>">   
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"> Get Quote</h3>
+    <h2 class="panel-title"> Get Quote</h2>
     <h6><%= @panel_title %></h6>
     <% if !@reservation.reservation_number.nil? &&  @reservation.reservation_number > 0 %>
     <p class="pull-right" style="line-height: 1px; font-size: 10px;"> #<%= @reservation.reservation_number %></p>

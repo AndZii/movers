@@ -1,3 +1,10 @@
 // Place all the styles related to the movers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$base-color: #F44336;
+
+.nav-tabs.nav-justified>li>a {
+    color: #000 !important;
+}
+

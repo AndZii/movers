@@ -91,14 +91,14 @@ body {
 }
 /* Mobile version */
 .navbar-default .navbar-toggle {
-    border-color: #DDD;
+    border-color: $base-color;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #DDD;
+    background-color: white;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #CCC;
+    background-color: $base-color;
 }
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -315,6 +315,27 @@ body {
     color: #ffffff !important;
 }
 
+.mobile-title {
+    h2 {
+      font-size: 30px;
+    }
+    
+    h6 {
+        font-size: 18px;
+    }
+    h3 {
+	    color:  #000000;
+	    font: normal 36px 'Cookie', cursive;
+        margin: 0;
+        text-align: center;
+    }
+    
+    span {
+	    color:  $base-color;
+    }
+    
+}
+ 
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,

@@ -1,0 +1,39 @@
+<div class="container">
+            <div class="row bs-wizard" style="border-bottom:0;">
+                <div class="col-xs-3 bs-wizard-step <%= @locations_completed %>">
+                  <div class="text-center bs-wizard-stepnum">Locations</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <%= link_to "", create_reservation_path(:locations), class: "bs-wizard-dot" %>
+                  <div class="bs-wizard-info text-center">
+<!--                      text-->
+                  </div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step <%= @options_completed  %>"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">Options</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <%= link_to "", create_reservation_path(:reservation_extras), class: "bs-wizard-dot" %>
+                  <div class="bs-wizard-info text-center">
+<!--                      text-->
+                  </div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step <%= @details_completed %>"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">Details</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <%= link_to "", create_reservation_path(:reservation_details), class: "bs-wizard-dot" %>
+                  <div class="bs-wizard-info text-center">
+<!--                      text-->
+                  </div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step <%= @contacts_completed  %>"><!-- active -->
+                  <div class="text-center bs-wizard-stepnum">Contacts</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <%= link_to "", create_reservation_path(:contacts), class: "bs-wizard-dot" %>
+                  <div class="bs-wizard-info text-center"> 
+<!--                  text-->
+                  </div>
+                </div>
+            </div>
+</div>
