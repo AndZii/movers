@@ -24,6 +24,20 @@
 $base-color: #F44336;
 $base-color-low-alpha: rgba(244, 67, 54, 0.47);
 
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    resize: vertical; 
+}
+
+.text-area:focus {
+      border-color: $base-color-low-alpha;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $base-color-low-alpha;
+      outline: 0 none;
+}
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -337,6 +351,7 @@ body {
 }
  
 textarea:focus,
+input[type="area"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="datetime"]:focus,

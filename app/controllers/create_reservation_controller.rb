@@ -77,9 +77,10 @@ class CreateReservationController < ApplicationController
             @reservation.zip_to   = params[:reservation][:zip_to]
             @reservation.zip_from = params[:reservation][:zip_from]
         when :reservation_details
-            
+            @reservation.moving_date   = params[:reservation][:moving_date]
+            @reservation.home_type   = params[:reservation][:home_type]
         when :reservation_extras
-      
+            @reservation.description   = params[:reservation][:description]
         when :contacts
             @reservation.email     = params[:reservation][:email]
             @reservation.phone_num = params[:reservation][:phone_num]

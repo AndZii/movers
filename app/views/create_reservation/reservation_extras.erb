@@ -1,3 +1,18 @@
 <%= render "/create_reservation/wizard_top" %> 
-<%= link_to 'Continue', next_wizard_path, class: "pull-right btn btn-default" %>
+<div class="col-xs-10 col-xs-offset-1">    
+    <%= form_for @reservation, :url => create_reservation_path, method: :put, :html => {:class => "form-horizontal center"} do |f| %>
+         
+         <div class="form-group">
+           <%= f.label "Size/Type" %>
+            <%= f.select(:home_type, options_for_select(["studio", "1 bedroom", "2 bedrooms", "3 bedrooms", "4 bedrooms", "house", "other", "commercial"]), {}, {class: "form-control"}) %>
+          </div>
+         
+          <div class="form-group">
+             <%= f.date_field :moving_date, id: "datepicker", class: "form-control" %>
+          </div>
+         
+          <%=  f.hidden_field :id   %> 
+          <%=  f.submit "Continue", class: "btn btn-default pull-right" %>  
+     <% end %>
+  </div>
 <%= render "/create_reservation/wizard_bottom" %> 
