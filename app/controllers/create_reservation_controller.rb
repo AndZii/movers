@@ -66,6 +66,8 @@ class CreateReservationController < ApplicationController
   def update  
     params.require(:reservation).permit!
     
+    puts params  
+      
     if params[:reservation][:id].empty?  
         @reservation = Reservation.new
     else
@@ -77,11 +79,14 @@ class CreateReservationController < ApplicationController
             @reservation.zip_to   = params[:reservation][:zip_to]
             @reservation.zip_from = params[:reservation][:zip_from]
         when :reservation_details
-            @reservation.moving_date   = params[:reservation][:moving_date]
-            @reservation.home_type   = params[:reservation][:home_type]
-        when :reservation_extras
             @reservation.description   = params[:reservation][:description]
+        when :reservation_extras
+            date = params[:reservation][:moving_date]
+            date.sub!('/', '-')
+            @reservation.moving_date   = date
+            @reservation.home_type   = params[:reservation][:home_type].to_s
         when :contacts
+            @reservation.first_name= params[:reservation][:first_name]
             @reservation.email     = params[:reservation][:email]
             @reservation.phone_num = params[:reservation][:phone_num]
         when :thank_you_page
@@ -90,6 +95,10 @@ class CreateReservationController < ApplicationController
       
     if @reservation.save  
       session[:reservation_id] = @reservation.id
+        puts @reservation.moving_date.to_s + " . " + @reservation.home_type.to_s
+      puts "saved"
+    else
+      puts "not saved"    
     end
       
     render_wizard(@reservation)

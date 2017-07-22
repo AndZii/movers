@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'movers/services'
 
-  get 'movers/gallery'
+  get 'movers/gallery' => 'movers#gallery', as: :gallery
 
   get 'movers/about'
 

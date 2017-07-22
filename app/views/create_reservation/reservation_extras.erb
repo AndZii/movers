@@ -4,10 +4,11 @@
          
          <div class="form-group">
            <%= f.label "Size/Type" %>
-            <%= f.select(:home_type, options_for_select(["studio", "1 bedroom", "2 bedrooms", "3 bedrooms", "4 bedrooms", "house", "other", "commercial"]), {}, {class: "form-control"}) %>
+            <%= f.select(:home_type, options_for_select(["studio", "1 bedroom", "2 bedrooms", "3 bedrooms", "4 bedrooms", "house", "other", "commercial"], @reservation.home_type), {}, {class: "form-control", "data-live-search" => "true"}) %>
           </div>
          
           <div class="form-group">
+             <%= f.label "Moving date" %>
              <%= f.date_field :moving_date, id: "datepicker", class: "form-control" %>
           </div>
          

@@ -1,7 +1,15 @@
 <%= render "/create_reservation/wizard_top" %> 
 <div class="col-xs-10 col-xs-offset-1">    
     <%= form_for @reservation, :url => create_reservation_path, method: :put, :html => {:class => "form-horizontal center"} do |f| %>
+          
           <div class="form-group">
+            <%= f.label :first_name, "Name", class: "control-label" %>
+            <div class="">
+              <%= f.text_field :first_name, class: "form-control" %>
+            </div>
+          </div>
+           
+           <div class="form-group">
             <%= f.label :phone_num, "Phone number", class: "control-label" %>
             <div class="">
               <%= f.text_field :phone_num, class: "form-control" %>
