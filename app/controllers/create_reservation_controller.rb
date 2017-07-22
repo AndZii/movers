@@ -74,15 +74,18 @@ class CreateReservationController < ApplicationController
         @reservation = Reservation.find(params[:reservation][:id])  
     end  
       
+      
+    @reservation.save_step = step
+      
       case step
         when :locations
             @reservation.zip_to   = params[:reservation][:zip_to]
             @reservation.zip_from = params[:reservation][:zip_from]
-        when :reservation_details
+        when :reservation_details  
             @reservation.description   = params[:reservation][:description]
         when :reservation_extras
             date = params[:reservation][:moving_date]
-            date.sub!('/', '-')
+            date.sub!('/', '-') if !date.nil?
             @reservation.moving_date   = date
             @reservation.home_type   = params[:reservation][:home_type].to_s
         when :contacts

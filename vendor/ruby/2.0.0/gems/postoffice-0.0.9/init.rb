@@ -1,0 +1,2 @@
+require 'postoffice'
+include PostOffice

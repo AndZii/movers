@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'reservation_view/index'
+
+  get 'reservation_view/show'
+
+  get 'reservation_view/edit'
+
   resources :pictures
   get 'movers/index'
 

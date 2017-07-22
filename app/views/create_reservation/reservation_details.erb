@@ -4,10 +4,9 @@
           <div class="form-group">
             <%= f.label :description, "Description/Coments", class: "control-label" %>
             <div class="">
-              <%= f.text_area :description, class: "form-control text-area", rows: "10", cols: "30"%>
+              <%= f.text_area :description, class: "form-control text-area", rows: "10", cols: "30", placeholder: "* Enter all additional information that will help us understand more about your relocation. Do you have any havy items, pianos, drum-kits, something fragile that has to be properly packed etc..."%>
             </div>
           </div>
-          <p>* Enter all additional information that will help us undertand more about your relocation. Do you have any havy items, pianos, drum-kits, something fragile that has to be properly packed etc... </p>
           <%=  f.hidden_field :id   %> 
           <%=  f.submit "Continue", class: "btn btn-default pull-right" %>  
      <% end %>
